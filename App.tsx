@@ -183,14 +183,14 @@ import axios from 'axios';
 
 // Конфигурация TonConnect (замени на свой манифест)
 const tonConnectUI = new TonConnectUI({
-  manifestUrl: 'http://localhost:5173/tonconnect-manifest.json', // https://your-website.com/tonconnect-manifest.json
+  manifestUrl: 'https://ssn587.github.io//tonconnect-manifest.json', // https://your-website.com/tonconnect-manifest.json
 });
 
 // Адреса контрактов (замени на свои)
 const TON_ADDRESS = 'EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c'; // TON 
 const MEMCOIN_ADDRESS = 'EQAyrrAjgSuyHrgGO1HimNbGV9tVLndZ3uocLaOyTw_FgegD'; // Адрес мемкоина в TON
 
-const HomePage = () => {
+const App = () => {
   const [wallet, setWallet] = useState<string | null>(null);
   const [tonBalance, setTonBalance] = useState<string>('0');
   const [memBalance, setMemBalance] = useState<string>('0');
@@ -322,4 +322,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default App;
