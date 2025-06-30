@@ -1,0 +1,179 @@
+.SocialButtonsContainer{
+  display: flex;
+  justify-content: center;
+  gap: 20px; // Расстояние между кнопками
+  width: 100%;
+}
+
+.SocialButton{
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+
+.SocialIcon{
+  margin-top: 65px;
+    height: 40px;
+    weight: 40px;
+    // width: 140px;
+    border-radius: 10px;
+}
+
+.ton-icon {
+  /* padding-top: 2px; */
+  /* margin-top: 2px; */
+  border-radius: 11px;
+  width: 15px;
+  height: 14px;
+}
+
+.container {
+    display: 'flex';
+    flexDirection: 'column' as const;
+    height: '100vh';
+    padding: '20px';
+    boxSizing: 'border-box' as const;
+}
+
+.typesScrollContainer{
+    overflowX: 'auto' as const;
+    marginBottom: '20px';
+    paddingBottom: '10px';
+  }
+
+.typeButtons{
+    display: 'flex';
+    gap: '10px';
+    width: 'max-content';
+  }
+
+.typeButton {
+    padding: '8px 16px';
+    background: '#f0f0f0';
+    border: 'none';
+    borderRadius: '20px';
+    cursor: 'pointer';
+    whiteSpace: 'nowrap' as const;
+    fontSize: '14px';
+  }
+
+.activeTypeButton {
+    background: '#007bff';
+    color: 'white';
+  }
+
+.itemsScrollContainer{
+    /* flex: 1;
+    overflowY: 'auto' as const; */
+    flex: 1;
+    overflowY: 'auto' as const;
+  }
+
+.itemsGrid{
+    display: 'flex';          
+    flexDirection: 'column';  
+    gap: '20px';              
+    gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))';
+    paddingRight: '10px';
+    paddingBottom: '120px';
+  }
+
+.menuItem{
+    border: '1px solid #ddd';
+    padding: '15px';
+    borderRadius: '8px';
+    height: 'fit-content';
+    width: '100%';       
+    maxWidth: '600px';      
+    margin: '0 auto';
+    transition: 'transform 0.2s';
+    hover{
+      transform: 'scale(1.02)';
+      boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+    }
+  }
+
+.itemImage{
+    width: '100%';
+    height: '150px';
+    objectFit: 'cover' as const;
+    borderRadius: '4px';
+    marginBottom: '10px';
+}
+
+.itemName{
+    margin: '0 0 10px 0';
+    fontSize: '16px';
+}
+
+.itemPrice{
+    margin: '0';
+    color: '#666';
+    fontSize: '14px';
+}
+
+/* Вертикальный список карточек */
+.dg-products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px; /* Можно регулировать */
+  margin: 0 auto;
+}
+
+.dg-product-card-vertical {
+  display: flex;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 200px; /* Уменьшаем высоту для горизонтального вида */
+}
+
+.dg-product-card-vertical .dg-image-container {
+  width: 40%;
+  height: 100%; /* Занимает всю высоту карточки */
+}
+
+.dg-product-card-vertical .dg-product-bottom {
+  width: 60%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .dg-product-card-vertical {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .dg-product-card-vertical .dg-image-container,
+  .dg-product-card-vertical .dg-product-bottom {
+    width: 100%;
+  }
+}
+
+.dg-header-image {
+  /* width: 100%;
+  height: 100%; */
+  height: 50px; 
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.dg-header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dg-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}   
